@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+</head>
+<body>
+    <button onclick="alert('Myself Tapu')">My Name</button>
+    <button onclick="console.log(2+2)">Add Two Number</button>
+    <button onclick="Blue()">Blue Color</button>
+    <button id="red-btn">Red Color</button>
+    <button id="green-btn">Green Color</button>
+    <script>
+        function Blue(){
+            document.body.style.backgroundColor = 'blue';
+        }
+
+        const redColor = document.getElementById('red-btn');
+        redColor.onclick = bodyRed;
+        function bodyRed(){
+            document.body.style.backgroundColor = 'red';
+        }
+
+        document.getElementById('green-btn').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'green';
+        })
+    </script>
+</body>
+</html>
